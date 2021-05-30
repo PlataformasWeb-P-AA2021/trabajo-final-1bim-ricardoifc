@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import csv
 # se importa la clase(s) del archivo genera_tablas
-from genera_tablas import Provincia,  Canton #, Parroquia, Establecimiento
+from genera_tablas import Provincia,  Canton , Parroquia, Establecimiento
 
 engine = create_engine('sqlite:///baseinstitucioneseducativas.db')
 

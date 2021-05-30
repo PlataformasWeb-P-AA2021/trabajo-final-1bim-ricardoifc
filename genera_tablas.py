@@ -65,15 +65,15 @@ class Establecimiento(Base):
     jornada = Column(String(40))
     acceso = Column(String(9))
     numEstudiantes = Column(Integer)
-    NumDocentes = Column(Integer)
+    numDocentes = Column(Integer)
     
     parroquia = relationship("Parroquia", back_populates="establecimiento")
     def __repr__(self):
         return "Establecimiento: codigo: %s - codParroquia:%s - distrito:%s - nombre: %s\
              - sostenimiento: %s - tipoEducacion: %s - modalidad: %s - jornada: %s\
-                  - acceso: %s - numEstudiantes: %d - NumDocentes: %d" % (
+                  - acceso: %s - numEstudiantes: %d - numDocentes: %d" % (
                 self.codigo, self.codParroquia, self.distrito, self.nombre,
                 self.sostenimiento, self.tipoEducacion, self.modalidad, self.jornada,
-                self.acceso, self.numEstudiantes, self.NumDocentes)
+                self.acceso, self.numEstudiantes, self.numDocentes)
 
 Base.metadata.create_all(engine)
